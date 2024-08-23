@@ -1,0 +1,23 @@
+{
+  "name": "user-web",
+  "port": 9005,
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379,
+    "password": ""
+  },
+  "jwt": {
+    "key": "Rzd7qYVQhRxXeR6s"
+  },
+  "juhe": {
+    "url": "http://v.juhe.cn/sms/send",
+    "key": "f0e44de188190b1101094b8d377c7372"
+  },
+  "consul": {
+    "host": "124.222.97.37",
+    "port": 8500
+  },
+  "user_srv": {
+    "name": "user-srv"
+  }
+}

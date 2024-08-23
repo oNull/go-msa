@@ -1,0 +1,66 @@
+syntax = "proto3";
+option go_package = ".;proto"; //.代表在当前目录生成，message代表了生成的go文件的包名是message。
+import "google/protobuf/empty.proto";
+
+// protoc -I ./ user.proto --go_out=plugins=grpc:.
+// protoc --go-grpc_out=. user.proto
+// protoc --go_out=. user.proto
+service User{
+  //获取用户列表页
+  rpc GetUserList(PageInfo) returns (UserListResponse);
+  rpc GetUserByMobile(MobileRequest) returns (UserInfoResponse);
+  rpc GetUserById(IdRequest) returns (UserInfoResponse);
+  rpc CreateUser(CreateUserInfo) returns (UserInfoResponse);
+  rpc UpdateUser(UpdateUserInfo) returns (google.protobuf.Empty); // 更新用户
+  rpc CheckPassWord(PasswordCheckInfo) returns (CheckResponse);
+}
+
+message CheckResponse{
+  bool success = 1;
+}
+
+message PasswordCheckInfo{
+  string password = 1;
+  string encryptedPassword = 2;
+}
+
+message PageInfo {
+  uint32 pn = 1;
+  uint32 pSize = 2;
+}
+
+message UpdateUserInfo {
+  int64 id = 1;
+  string nickName = 2;
+  string gender = 3;
+  uint64 birthday = 4;
+}
+
+message MobileRequest {
+  string  mobile = 1;
+}
+
+message CreateUserInfo {
+  string password = 1;
+  string mobile = 2;
+  string nickName = 3;
+}
+
+message IdRequest {
+  int64 id = 1;
+}
+
+message UserInfoResponse {
+  int32 id = 1;
+  string password = 2;
+  string mobile = 3;
+  string nickName = 4;
+  uint64 birthDay = 5;
+  string gender = 6;
+  int32 role = 7;
+}
+
+message UserListResponse {
+  int32 total = 1;
+  repeated UserInfoResponse data = 2;
+}

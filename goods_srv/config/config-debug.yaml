@@ -1,0 +1,7 @@
+host: '124.222.97.37'
+port: 8848
+namespace: 'c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8'
+user: 'nacos'
+password: 'pengyuan123'
+dataid: 'goods_srv.json'
+group: 'dev'

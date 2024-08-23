@@ -1,0 +1,163 @@
+2024-08-07T10:42:32.552+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T10:42:32.557+0800	DEBUG	rpc/rpc_client.go:290	config-0-ee8d4371-02e6-45f9-aa71-3fa8d1d689ff register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T10:42:32.557+0800	DEBUG	rpc/rpc_client.go:290	config-0-ee8d4371-02e6-45f9-aa71-3fa8d1d689ff register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T10:42:32.557+0800	DEBUG	rpc/rpc_client.go:290	config-0-ee8d4371-02e6-45f9-aa71-3fa8d1d689ff register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T10:42:32.557+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-ee8d4371-02e6-45f9-aa71-3fa8d1d689ff try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T10:42:32.577+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T10:42:33.903+0800	INFO	rpc/rpc_client.go:234	config-0-ee8d4371-02e6-45f9-aa71-3fa8d1d689ff success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1722998553459_113.110.254.170_63293
+2024-08-07T10:42:34.753+0800	INFO	rpc/rpc_client.go:499	Connection is unregistered, switch server, connectionId=1722998553459_113.110.254.170_63293, request=ConfigQueryRequest
+2024-08-07T10:42:34.753+0800	INFO	rpc/rpc_client.go:322	config-0-ee8d4371-02e6-45f9-aa71-3fa8d1d689ff try to re connect to a new server, server is not appointed, will choose a random server.
+2024-08-07T10:42:34.753+0800	ERROR	rpc/rpc_client.go:525	Send request fail, request=ConfigQueryRequest, body={"requestId":"","group":"dev","dataId":"goods_srv.json","tenant":"c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8","module":"config","tag":""}, retryTimes=0, error=Connection is unregistered.
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/common/remote/rpc/rpc_client.go:505
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).requestProxy
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_proxy.go:64
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).queryConfig
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_proxy.go:116
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).getConfigInner
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_client.go:192
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).GetConfig
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_client.go:160
+goods_srv/initialize.InitConfig
+	D:/GoCode/py_mxshop_srv/goods_srv/initialize/init_config.go:70
+main.main
+	D:/GoCode/py_mxshop_srv/goods_srv/main.go:29
+runtime.main
+	D:/Go/src/runtime/proc.go:250
+runtime.goexit
+	D:/Go/src/runtime/asm_amd64.s:1594
+2024-08-07T10:42:34.859+0800	ERROR	rpc/rpc_client.go:525	Send request fail, request=ConfigQueryRequest, body={"requestId":"","group":"dev","dataId":"goods_srv.json","tenant":"c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8","module":"config","tag":""}, retryTimes=1, error=client not connected, current status:UNHEALTHY
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/common/remote/rpc/rpc_client.go:487
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).requestProxy
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_proxy.go:64
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).queryConfig
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_proxy.go:116
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).getConfigInner
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_client.go:192
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).GetConfig
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_client.go:160
+goods_srv/initialize.InitConfig
+	D:/GoCode/py_mxshop_srv/goods_srv/initialize/init_config.go:70
+main.main
+	D:/GoCode/py_mxshop_srv/goods_srv/main.go:29
+runtime.main
+	D:/Go/src/runtime/proc.go:250
+runtime.goexit
+	D:/Go/src/runtime/asm_amd64.s:1594
+2024-08-07T10:42:34.967+0800	ERROR	rpc/rpc_client.go:525	Send request fail, request=ConfigQueryRequest, body={"requestId":"","group":"dev","dataId":"goods_srv.json","tenant":"c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8","module":"config","tag":""}, retryTimes=2, error=client not connected, current status:UNHEALTHY
+github.com/nacos-group/nacos-sdk-go/v2/common/remote/rpc.(*RpcClient).Request
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/common/remote/rpc/rpc_client.go:487
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).requestProxy
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_proxy.go:64
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigProxy).queryConfig
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_proxy.go:116
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).getConfigInner
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_client.go:192
+github.com/nacos-group/nacos-sdk-go/v2/clients/config_client.(*ConfigClient).GetConfig
+	D:/GoCode/pkg/mod/github.com/nacos-group/nacos-sdk-go/v2@v2.2.5/clients/config_client/config_client.go:160
+goods_srv/initialize.InitConfig
+	D:/GoCode/py_mxshop_srv/goods_srv/initialize/init_config.go:70
+main.main
+	D:/GoCode/py_mxshop_srv/goods_srv/main.go:29
+runtime.main
+	D:/Go/src/runtime/proc.go:250
+runtime.goexit
+	D:/Go/src/runtime/asm_amd64.s:1594
+2024-08-07T10:42:35.074+0800	ERROR	config_client/config_client.go:195	get config from server error:client not connected, current status:UNHEALTHY, dataId=goods_srv.json, group=dev, namespaceId=c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8
+2024-08-07T10:53:57.585+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T10:53:57.587+0800	DEBUG	rpc/rpc_client.go:290	config-0-b9387328-90f6-4e37-8b6c-cd1e595833b2 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T10:53:57.587+0800	DEBUG	rpc/rpc_client.go:290	config-0-b9387328-90f6-4e37-8b6c-cd1e595833b2 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T10:53:57.587+0800	DEBUG	rpc/rpc_client.go:290	config-0-b9387328-90f6-4e37-8b6c-cd1e595833b2 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T10:53:57.587+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-b9387328-90f6-4e37-8b6c-cd1e595833b2 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T10:53:57.604+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T10:54:00.596+0800	WARN	rpc/rpc_client.go:226	[RpcClient.Start] config-0-b9387328-90f6-4e37-8b6c-cd1e595833b2 fail to connect to server on start up, error message=server check request failed , err:rpc error: code = DeadlineExceeded desc = context deadline exceeded, start up retry times left=2
+2024-08-07T10:54:00.597+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-b9387328-90f6-4e37-8b6c-cd1e595833b2 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T10:54:03.611+0800	WARN	rpc/rpc_client.go:226	[RpcClient.Start] config-0-b9387328-90f6-4e37-8b6c-cd1e595833b2 fail to connect to server on start up, error message=server check request failed , err:rpc error: code = DeadlineExceeded desc = context deadline exceeded, start up retry times left=1
+2024-08-07T10:54:03.612+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-b9387328-90f6-4e37-8b6c-cd1e595833b2 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T10:54:06.652+0800	INFO	rpc/rpc_client.go:234	config-0-b9387328-90f6-4e37-8b6c-cd1e595833b2 success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1722999246485_113.110.254.170_50255
+2024-08-07T10:54:07.901+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path tmp/nacos/cache\config\encrypted-data-key\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8, file doesn't exist.
+2024-08-07T11:02:22.138+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T11:02:22.139+0800	DEBUG	rpc/rpc_client.go:290	config-0-9f12ffd4-14f6-419c-bf97-2c9954880867 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T11:02:22.140+0800	DEBUG	rpc/rpc_client.go:290	config-0-9f12ffd4-14f6-419c-bf97-2c9954880867 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T11:02:22.140+0800	DEBUG	rpc/rpc_client.go:290	config-0-9f12ffd4-14f6-419c-bf97-2c9954880867 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T11:02:22.140+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-9f12ffd4-14f6-419c-bf97-2c9954880867 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T11:02:22.156+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T11:02:23.628+0800	INFO	rpc/rpc_client.go:234	config-0-9f12ffd4-14f6-419c-bf97-2c9954880867 success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1722999743487_113.110.254.170_51830
+2024-08-07T11:02:23.688+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path tmp/nacos/cache\config\encrypted-data-key\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8, file doesn't exist.
+2024-08-07T11:07:59.585+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T11:07:59.586+0800	DEBUG	rpc/rpc_client.go:290	config-0-ef3e0482-0253-4007-a7ca-535b70fbcf8f register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T11:07:59.586+0800	DEBUG	rpc/rpc_client.go:290	config-0-ef3e0482-0253-4007-a7ca-535b70fbcf8f register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T11:07:59.586+0800	DEBUG	rpc/rpc_client.go:290	config-0-ef3e0482-0253-4007-a7ca-535b70fbcf8f register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T11:07:59.586+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-ef3e0482-0253-4007-a7ca-535b70fbcf8f try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T11:07:59.602+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T11:08:01.588+0800	INFO	rpc/rpc_client.go:234	config-0-ef3e0482-0253-4007-a7ca-535b70fbcf8f success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1723000081443_113.110.254.170_52949
+2024-08-07T11:08:01.617+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path tmp/nacos/cache\config\encrypted-data-key\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8, file doesn't exist.
+2024-08-07T11:09:39.662+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T11:09:39.662+0800	DEBUG	rpc/rpc_client.go:290	config-0-4886d8c9-5136-4455-8332-2272a12dbaf8 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T11:09:39.663+0800	DEBUG	rpc/rpc_client.go:290	config-0-4886d8c9-5136-4455-8332-2272a12dbaf8 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T11:09:39.663+0800	DEBUG	rpc/rpc_client.go:290	config-0-4886d8c9-5136-4455-8332-2272a12dbaf8 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T11:09:39.663+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-4886d8c9-5136-4455-8332-2272a12dbaf8 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T11:09:39.680+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T11:09:42.670+0800	WARN	rpc/rpc_client.go:226	[RpcClient.Start] config-0-4886d8c9-5136-4455-8332-2272a12dbaf8 fail to connect to server on start up, error message=server check request failed , err:rpc error: code = DeadlineExceeded desc = context deadline exceeded, start up retry times left=2
+2024-08-07T11:09:42.670+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-4886d8c9-5136-4455-8332-2272a12dbaf8 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T11:09:44.686+0800	INFO	rpc/rpc_client.go:234	config-0-4886d8c9-5136-4455-8332-2272a12dbaf8 success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1723000184541_113.110.254.170_53247
+2024-08-07T11:09:44.735+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path tmp/nacos/cache\config\encrypted-data-key\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8, file doesn't exist.
+2024-08-07T11:12:17.873+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T11:12:17.874+0800	DEBUG	rpc/rpc_client.go:290	config-0-3adc0e04-4291-4381-b628-76ca1da31b8b register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T11:12:17.874+0800	DEBUG	rpc/rpc_client.go:290	config-0-3adc0e04-4291-4381-b628-76ca1da31b8b register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T11:12:17.874+0800	DEBUG	rpc/rpc_client.go:290	config-0-3adc0e04-4291-4381-b628-76ca1da31b8b register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T11:12:17.874+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-3adc0e04-4291-4381-b628-76ca1da31b8b try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T11:12:17.894+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T11:12:18.854+0800	INFO	rpc/rpc_client.go:234	config-0-3adc0e04-4291-4381-b628-76ca1da31b8b success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1723000338709_113.110.254.170_53723
+2024-08-07T11:12:18.887+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path tmp/nacos/cache\config\encrypted-data-key\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8, file doesn't exist.
+2024-08-07T11:14:08.325+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T11:14:08.326+0800	DEBUG	rpc/rpc_client.go:290	config-0-ed7a2ae6-a5f7-448f-a450-90fd5c565c19 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T11:14:08.326+0800	DEBUG	rpc/rpc_client.go:290	config-0-ed7a2ae6-a5f7-448f-a450-90fd5c565c19 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T11:14:08.326+0800	DEBUG	rpc/rpc_client.go:290	config-0-ed7a2ae6-a5f7-448f-a450-90fd5c565c19 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T11:14:08.326+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-ed7a2ae6-a5f7-448f-a450-90fd5c565c19 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T11:14:08.346+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T11:14:08.822+0800	INFO	rpc/rpc_client.go:234	config-0-ed7a2ae6-a5f7-448f-a450-90fd5c565c19 success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1723000448659_113.110.254.170_54035
+2024-08-07T11:14:08.861+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path tmp/nacos/cache\config\encrypted-data-key\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8, file doesn't exist.
+2024-08-07T11:15:51.900+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T11:15:51.903+0800	DEBUG	rpc/rpc_client.go:290	config-0-5dbe5208-3eb3-4417-b5f2-c793c5cd53ef register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T11:15:51.903+0800	DEBUG	rpc/rpc_client.go:290	config-0-5dbe5208-3eb3-4417-b5f2-c793c5cd53ef register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T11:15:51.903+0800	DEBUG	rpc/rpc_client.go:290	config-0-5dbe5208-3eb3-4417-b5f2-c793c5cd53ef register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T11:15:51.903+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-5dbe5208-3eb3-4417-b5f2-c793c5cd53ef try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T11:15:51.926+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T11:15:54.449+0800	INFO	rpc/rpc_client.go:234	config-0-5dbe5208-3eb3-4417-b5f2-c793c5cd53ef success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1723000554285_113.110.254.170_54395
+2024-08-07T11:15:54.923+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path tmp/nacos/cache\config\encrypted-data-key\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8, file doesn't exist.
+2024-08-07T11:18:05.474+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T11:18:05.475+0800	DEBUG	rpc/rpc_client.go:290	config-0-0bfb964e-5b25-4485-9841-c3234a951a56 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T11:18:05.476+0800	DEBUG	rpc/rpc_client.go:290	config-0-0bfb964e-5b25-4485-9841-c3234a951a56 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T11:18:05.476+0800	DEBUG	rpc/rpc_client.go:290	config-0-0bfb964e-5b25-4485-9841-c3234a951a56 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T11:18:05.476+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-0bfb964e-5b25-4485-9841-c3234a951a56 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T11:18:05.497+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T11:18:06.455+0800	INFO	rpc/rpc_client.go:234	config-0-0bfb964e-5b25-4485-9841-c3234a951a56 success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1723000686301_113.110.254.170_54785
+2024-08-07T11:18:06.492+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path tmp/nacos/cache\config\encrypted-data-key\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8, file doesn't exist.
+2024-08-07T18:17:44.484+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T18:17:44.485+0800	DEBUG	rpc/rpc_client.go:290	config-0-4d5b0c36-2c6e-4ab1-8612-e5574fcd82c1 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T18:17:44.485+0800	DEBUG	rpc/rpc_client.go:290	config-0-4d5b0c36-2c6e-4ab1-8612-e5574fcd82c1 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T18:17:44.485+0800	DEBUG	rpc/rpc_client.go:290	config-0-4d5b0c36-2c6e-4ab1-8612-e5574fcd82c1 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T18:17:44.485+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-4d5b0c36-2c6e-4ab1-8612-e5574fcd82c1 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T18:17:44.510+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T18:17:47.486+0800	WARN	rpc/rpc_client.go:226	[RpcClient.Start] config-0-4d5b0c36-2c6e-4ab1-8612-e5574fcd82c1 fail to connect to server on start up, error message=server check request failed , err:rpc error: code = DeadlineExceeded desc = context deadline exceeded, start up retry times left=2
+2024-08-07T18:17:47.487+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-4d5b0c36-2c6e-4ab1-8612-e5574fcd82c1 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T18:17:50.525+0800	INFO	rpc/rpc_client.go:234	config-0-4d5b0c36-2c6e-4ab1-8612-e5574fcd82c1 success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1723025870380_113.110.254.170_56674
+2024-08-07T18:17:50.634+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path tmp/nacos/cache\config\encrypted-data-key\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8, file doesn't exist.
+2024-08-07T18:19:05.869+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T18:19:05.871+0800	DEBUG	rpc/rpc_client.go:290	config-0-92eee5c5-4ab3-4e6c-9604-5b32a34d82d4 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T18:19:05.871+0800	DEBUG	rpc/rpc_client.go:290	config-0-92eee5c5-4ab3-4e6c-9604-5b32a34d82d4 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T18:19:05.871+0800	DEBUG	rpc/rpc_client.go:290	config-0-92eee5c5-4ab3-4e6c-9604-5b32a34d82d4 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T18:19:05.871+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-92eee5c5-4ab3-4e6c-9604-5b32a34d82d4 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T18:19:05.896+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T18:19:06.079+0800	INFO	rpc/rpc_client.go:234	config-0-92eee5c5-4ab3-4e6c-9604-5b32a34d82d4 success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1723025945933_113.110.254.170_56949
+2024-08-07T18:19:06.111+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path tmp/nacos/cache\config\encrypted-data-key\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8, file doesn't exist.
+2024-08-07T18:20:21.449+0800	ERROR	cache/disk_cache.go:193	read Config Content failed. cause file doesn't exist, file path: tmp/nacos/cache\config\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8_failover.
+2024-08-07T18:20:21.450+0800	DEBUG	rpc/rpc_client.go:290	config-0-9e542bd0-ed6c-44ba-8338-82b64fd34414 register server push request:ConfigChangeNotifyRequest handler:ConfigChangeNotifyRequestHandler
+2024-08-07T18:20:21.450+0800	DEBUG	rpc/rpc_client.go:290	config-0-9e542bd0-ed6c-44ba-8338-82b64fd34414 register server push request:ConnectResetRequest handler:ConnectResetRequestHandler
+2024-08-07T18:20:21.450+0800	DEBUG	rpc/rpc_client.go:290	config-0-9e542bd0-ed6c-44ba-8338-82b64fd34414 register server push request:ClientDetectionRequest handler:ClientDetectionRequestHandler
+2024-08-07T18:20:21.450+0800	INFO	rpc/rpc_client.go:224	[RpcClient.Start] config-0-9e542bd0-ed6c-44ba-8338-82b64fd34414 try to connect to server on start up, server: {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848}
+2024-08-07T18:20:21.475+0800	INFO	util/common.go:96	Local IP:172.24.240.1
+2024-08-07T18:20:23.977+0800	INFO	rpc/rpc_client.go:234	config-0-9e542bd0-ed6c-44ba-8338-82b64fd34414 success to connect to server {serverIp:124.222.97.37 serverPort:8848 serverGrpcPort:9848} on start up, connectionId=1723026023833_113.110.254.170_57243
+2024-08-07T18:20:24.032+0800	DEBUG	cache/disk_cache.go:136	no need to delete Config Encrypted Data Key cache file, file path tmp/nacos/cache\config\encrypted-data-key\goods_srv.json@@dev@@c5fd4b00-67d2-4b52-8d51-d6af4ab8bca8, file doesn't exist.
